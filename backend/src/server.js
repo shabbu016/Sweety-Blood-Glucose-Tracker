@@ -5,12 +5,15 @@ require("dotenv").config();
 const pool = require("./config/database");
 
 const app = express();
+const authRoutes = require("./routes/authRoutes");
 
 app.use(cors({
     origin: process.env.CLIENT_URL
 }));
 
 app.use(express.json());
+
+app.use("/api/auth", authRoutes);
 
 app.get("/", (req, res) => {
     res.status(200).json({
@@ -21,7 +24,9 @@ app.get("/", (req, res) => {
 
 app.get("/api/health", async (req, res) => {
     try {
-        const result = await pool.query("SELECT NOW() AS database_time");
+        const result = await pool.query(
+            "SELECT NOW() AS database_time"
+        );
 
         res.status(200).json({
             success: true,
