@@ -6,6 +6,8 @@ const pool = require("./config/database");
 
 const app = express();
 const authRoutes = require("./routes/authRoutes");
+const readingRoutes = require("./routes/readingRoutes");
+const reportRoutes = require("./routes/reportRoutes");
 
 app.use(cors({
     origin: process.env.CLIENT_URL
@@ -14,6 +16,8 @@ app.use(cors({
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
+app.use("/api/readings", readingRoutes);
+app.use("/api/reports", reportRoutes);
 
 app.get("/", (req, res) => {
     res.status(200).json({
