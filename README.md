@@ -41,6 +41,8 @@ Sweety helps users maintain their blood glucose records by date and time slot. U
 Sweety-Blood-Glucose-Tracker/
 │
 ├── backend/
+│   ├── scripts/
+│   │   └── seed.js
 │   ├── src/
 │   │   ├── config/
 │   │   ├── controllers/
@@ -139,7 +141,30 @@ psql -U postgres -d sweety_db -f src/db/migrations/001_create_users_and_readings
 
 Enter your PostgreSQL password when prompted.
 
-### 5. Start the backend server
+### 5. Configure demo data (Optional)
+
+To create a demo account and populate the database with sample glucose readings, run:
+
+```bash
+npm run seed
+```
+
+The seed script creates a demo account and inserts up to 28 sample readings covering seven days and all four supported time slots.
+
+**Demo Login Credentials**
+
+| Field    | Value                  |
+| -------- | ---------------------- |
+| Email    | demo@sweetytracker.com |
+| Password | SweetyDemo@123         |
+
+The seed script can be run multiple times. Existing demo accounts and readings are reused, and duplicate readings are skipped.
+
+These credentials are intended only for local assignment demonstration.
+
+### 6. Start the backend server
+
+From the `backend` directory:
 
 ```bash
 node src/server.js
@@ -149,7 +174,7 @@ The backend API runs at:
 
 `http://localhost:5000`
 
-### 6. Configure and start the frontend
+### 7. Configure and start the frontend
 
 Open another terminal:
 
@@ -164,7 +189,11 @@ Create the frontend environment file:
 Copy-Item .env.example .env
 ```
 
-Configure the API URL according to the frontend environment template.
+The frontend API URL can be configured in `frontend/.env`:
+
+```env
+VITE_API_URL=http://127.0.0.1:5000/api
+```
 
 Start the frontend:
 
@@ -211,7 +240,7 @@ The test suite covers:
 - Reading updates and deletion.
 - Report calculations.
 
-**Latest verification:** 29 backend tests passed.
+**Latest verification: 29 backend tests passed.**
 
 ## Production Build
 
