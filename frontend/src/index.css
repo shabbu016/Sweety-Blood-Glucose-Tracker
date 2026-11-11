@@ -1,1 +1,24 @@
+
 @import "tailwindcss";
+
+/* Tailwind dark mode follows the HTML root data-theme attribute. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+    color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+}
+
+/* Smooth theme transitions */
+body,
+header,
+aside,
+main {
+    transition:
+        background-color 200ms ease,
+        color 200ms ease,
+        border-color 200ms ease;
+}

@@ -8,6 +8,21 @@ const validSlots = [
     "after_dinner"
 ];
 
+const getTodayInIndia = () => {
+    const parts = new Intl.DateTimeFormat("en-US", {
+        timeZone: "Asia/Kolkata",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+    }).formatToParts(new Date());
+
+    const dateParts = Object.fromEntries(
+        parts.map(({ type, value }) => [type, value])
+    );
+
+    return `${dateParts.year}-${dateParts.month}-${dateParts.day}`;
+};
+
 const createReading = async (req, res) => {
     try {
         const { reading_date, time_slot, glucose_value } = req.body;
@@ -38,9 +53,7 @@ const createReading = async (req, res) => {
             });
         }
 
-        const today = new Date().toLocaleDateString("en-CA", {
-            timeZone: "Asia/Kolkata"
-        });
+        const today = getTodayInIndia();
 
         if (reading_date > today) {
             return res.status(400).json({
