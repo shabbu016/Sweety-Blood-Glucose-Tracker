@@ -31,53 +31,53 @@ The following screenshots demonstrate the main features and user interface of Sw
 
 ### 1. Authentication
 
-![Login Page](submission/screenshots/01-login.png)
+![Login Page](Submission/Screenshots/01-login.png)
 
-![Registration Page](submission/screenshots/02-register.png)
+![Registration Page](Submission/Screenshots/02-register.png)
 
 ### 2. Dashboard
 
 **Dark Theme**
 
-![Dashboard Overview - Dark](submission/screenshots/03-dashboard-overview-dark.png)
+![Dashboard Overview - Dark](Submission/Screenshots/03-dashboard-overview-dark.png)
 
 **Recent Glucose Readings**
 
-![Recent Readings](submission/screenshots/04-dashboard-recent-readings.png)
+![Recent Readings](Submission/Screenshots/04-dashboard-recent-readings.png)
 
 **Light Theme**
 
-![Dashboard Overview - Light](submission/screenshots/11-dashboard-overview-light.png)
+![Dashboard Overview - Light](Submission/Screenshots/11-dashboard-overview-light.png)
 
 ### 3. Glucose Readings Management
 
 **Add Reading**
 
-![Add Reading](submission/screenshots/05-readings-add.png)
+![Add Reading](Submission/Screenshots/05-readings-add.png)
 
 **Edit Reading**
 
-![Edit Reading](submission/screenshots/06-readings-edit.png)
+![Edit Reading](Submission/Screenshots/06-readings-edit.png)
 
 ### 4. Reports and Analytics
 
 **Daily Report**
 
-![Daily Report](submission/screenshots/07-daily-report.png)
+![Daily Report](Submission/Screenshots/07-daily-report.png)
 
 **Monthly Report**
 
-![Monthly Report](submission/screenshots/08-monthly-report.png)
+![Monthly Report](Submission/Screenshots/08-monthly-report.png)
 
 ### 5. User Profile
 
 **Profile Overview**
 
-![Profile Overview](submission/screenshots/09-profile-overview.png)
+![Profile Overview](Submission/Screenshots/09-profile-overview.png)
 
 **Profile Details**
 
-![Profile Details](submission/screenshots/10-profile-details.png)
+![Profile Details](Submission/Screenshots/10-profile-details.png)
 
 ## Technology Stack
 
