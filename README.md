@@ -25,6 +25,60 @@ Sweety helps users maintain their blood glucose records by date and time slot. U
 - Daily, month-to-date, and previous-month reports.
 - Light and dark themes.
 
+## Application Screenshots
+
+The following screenshots demonstrate the main features and user interface of Sweety Blood Glucose Tracker.
+
+### 1. Authentication
+
+![Login Page](submission/screenshots/01-login.png)
+
+![Registration Page](submission/screenshots/02-register.png)
+
+### 2. Dashboard
+
+**Dark Theme**
+
+![Dashboard Overview - Dark](submission/screenshots/03-dashboard-overview-dark.png)
+
+**Recent Glucose Readings**
+
+![Recent Readings](submission/screenshots/04-dashboard-recent-readings.png)
+
+**Light Theme**
+
+![Dashboard Overview - Light](submission/screenshots/11-dashboard-overview-light.png)
+
+### 3. Glucose Readings Management
+
+**Add Reading**
+
+![Add Reading](submission/screenshots/05-readings-add.png)
+
+**Edit Reading**
+
+![Edit Reading](submission/screenshots/06-readings-edit.png)
+
+### 4. Reports and Analytics
+
+**Daily Report**
+
+![Daily Report](submission/screenshots/07-daily-report.png)
+
+**Monthly Report**
+
+![Monthly Report](submission/screenshots/08-monthly-report.png)
+
+### 5. User Profile
+
+**Profile Overview**
+
+![Profile Overview](submission/screenshots/09-profile-overview.png)
+
+**Profile Details**
+
+![Profile Details](submission/screenshots/10-profile-details.png)
+
 ## Technology Stack
 
 | Layer          | Technology                     |
@@ -45,14 +99,27 @@ Sweety-Blood-Glucose-Tracker/
 │   │   └── seed.js
 │   ├── src/
 │   │   ├── config/
+│   │   │   └── database.js
 │   │   ├── controllers/
+│   │   │   ├── authController.js
+│   │   │   ├── readingController.js
+│   │   │   └── reportController.js
+│   │   ├── middleware/
+│   │   │   └── authMiddleware.js
+│   │   ├── routes/
+│   │   │   ├── authRoutes.js
+│   │   │   ├── readingRoutes.js
+│   │   │   └── reportRoutes.js
 │   │   ├── db/
 │   │   │   └── migrations/
-│   │   ├── middleware/
-│   │   ├── routes/
+│   │   │       └── 001_create_users_and_readings.sql
 │   │   ├── app.js
 │   │   └── server.js
 │   ├── tests/
+│   │   ├── app.test.js
+│   │   ├── auth.test.js
+│   │   ├── reading.test.js
+│   │   └── report.test.js
 │   ├── .env.example
 │   └── package.json
 │
@@ -62,11 +129,26 @@ Sweety-Blood-Glucose-Tracker/
 │   │   ├── components/
 │   │   ├── layouts/
 │   │   ├── pages/
-│   │   └── services/
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
 │   ├── .env.example
 │   └── package.json
 │
-├── .gitignore
+├── submission/
+│   └── screenshots/
+│       ├── 01-login.png
+│       ├── 02-register.png
+│       ├── 03-dashboard-overview-dark.png
+│       ├── 04-dashboard-recent-readings.png
+│       ├── 05-readings-add.png
+│       ├── 06-readings-edit.png
+│       ├── 07-daily-report.png
+│       ├── 08-monthly-report.png
+│       ├── 09-profile-overview.png
+│       ├── 10-profile-details.png
+│       └── 11-dashboard-overview-light.png
+│
 └── README.md
 ```
 
